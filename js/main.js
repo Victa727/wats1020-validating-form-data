@@ -1,22 +1,11 @@
-// Zipcode Validation
-var regex = /^\d{1,5}$/;
-var answer = SSI_GetValue("zipcode");
-if(regex.test(answer)) { 
-}
-else {
-  strErrorMessage="Please revise your five-digit Zip Code."; 
-}
-
 
 $(document).on('ready', function(){
     // Form validation
-  
-  $('order-form').validate({
-    submitHandler: function(form) {
-      form.submit();
-      
-      
-    },
+    $('#order-form').validate({
+        submitHandler: function(form) {
+            // If form is valid, submit it!
+            form.submit();
+        },
         rules: {
             "your-name": {
                 required: true,
@@ -76,12 +65,7 @@ $(document).on('ready', function(){
     $('label span.glyphicon').tooltip();
 });
     
-// TOOLTIP FUNCTION
-
-$(document).ready(function() {
-   $('[data-toggle="tooltip"]').tooltip();
-  
-  });
+/*
     
   // array of state abbreviations
   var stateAB =  [ "AL", "AK" , "AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY",
@@ -116,7 +100,7 @@ $(document).ready(function() {
     
 });    
     
-  
+  */
  
 
 // For this assignment you'll need to do a few things:
